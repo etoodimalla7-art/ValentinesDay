@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heart for You | Valentine's Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="background-hearts"></div>
+    <div class="particles-container"></div>
+    <div class="gradient-background"></div>
+
+    <!-- Audio Player -->
+    <div class="audio-controls">
+        <button id="musicToggle" class="music-btn" aria-label="Toggle background music">
+            <i class="fas fa-music"></i>
+            <span>Play Music</span>
+        </button>
+        <audio id="backgroundMusic" loop>
+            <source src="assets/music/8ème merveille.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-heart"></i> My Heart for You
+                </h1>
+                <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#welcome" class="nav-link active" data-page="welcome">Welcome</a></li>
+                        <li><a href="#story" class="nav-link" data-page="story">Our Story</a></li>
+                        <li><a href="#love" class="nav-link" data-page="love">Why I Love You</a></li>
+                        <li><a href="#gallery" class="nav-link" data-page="gallery">Gallery</a></li>
+                        <li><a href="#letter" class="nav-link" data-page="letter">Love Letter</a></li>
+                        <li><a href="#surprise" class="nav-link" data-page="surprise">Surprise</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="page-container" id="page-container">
+            <!-- Welcome Page (Default) -->
+            <section class="page active" id="welcome-page" data-page="welcome">
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h2 class="welcome-title animate-float">To My Dearest Love,</h2>
+                        <p class="welcome-message">Every moment with you feels like a beautiful dream. Today, and every day, I want to remind you how incredibly special you are to me.</p>
+                        <div class="heart-beat">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <button class="enter-btn" id="enterBtn">
+                            <span>Enter My Heart</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="welcome-image">
+                        <div class="floating-hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other pages will be loaded dynamically by the router -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>Made with <i class="fas fa-heart"></i> for Mi carino ❤</p>
+            <div class="footer-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals will be created dynamically -->
+
+    <!-- Scripts -->
+    <script src="js/state.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
